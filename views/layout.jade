@@ -1,7 +1,36 @@
-doctype 5
-html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+html(xmlns='http://www.w3.org/1999/xhtml')
+	head
+		meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+		title ownlinux.net
+		style
+			body{padding-left:10px;padding-right:10px;padding-top:10px;padding-bottom:10px;}
+		link(rel="stylesheet", type="text/css", href="/stylesheets/bootstrap.css")
+		link(rel="stylesheet", type="text/css", href="/stylesheets/bootstrap-responsive.css")
+	
+	body
+	
+		div.navbar.navbar-fixed-top
+			div.navbar-inner
+				div.container
+					a.btn.btn-navbar(data-toggle="collapse", data-target=".nav-collapse")
+						span.icon-bar 
+						span.icon-bar 
+						span.icon-bar 
+					a.brand(href="/") Ownlinux
+					div.nav-collapse
+						ul.nav
+							li.active
+								a(href="/") Index
+						ul.nav
+							li
+								a(href="/logig") Login
+							li 
+								a(href="/signup") SignUp
+				
+		div#container.container
+			block content
+			footer
+				p 
+					a(href="http://blog.ownlinux.net", target="_blank") nourlcn
+		script(src="/javascripts/jquery.js")
+		script(src="/javascripts/bootstrap.js")
