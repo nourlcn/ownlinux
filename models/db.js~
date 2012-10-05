@@ -1,0 +1,4 @@
+var settings = require('../settings');
+var db = require('mongodb').Db;
+var connection = require('mongodb').Connection;
+var server = require('mongodb').Server;

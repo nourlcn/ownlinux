@@ -5,9 +5,11 @@
   "scripts": {
     "start": "node app"
   },
+
   "dependencies": {
     "express": "3.0.0rc4",
     "jade": "*",
-    "ejs":"*"
+    "mongodb":">=0.9.9",
+    "connect-mongo":">=0.1.7"
   }
 }
