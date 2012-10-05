@@ -3,20 +3,16 @@ extends layout
 block content
     form.form-horizontal(method="post")
         fieldset
-            legend Please sign up
+            legend Please Login
             div.control-group
                 label.control-label(for="username") Username
                 div.controls
                     input#username.input-xlarge(name="username", type="text")
-                    p.help-block Your username, used for login.
+                    p.help-block Your username@ownlinux.net.
             div.control-group
                 label.control-label(for="password") Password
                 div.controls
                     input#password.input-xlarge(name="password", type="password")
-            div.control-group
-                label.control-label(for="password-repeat") Repeat your password
-                div.controls
-                    input#password-repeat.input-xlarge(name="password-repeat", type="password")
-
+                    p.help-block Your password.
             div.form-actions
-                button.btn.btn-primary(type="submit") Register
+                button.btn.btn-primary(type="submit") Login

@@ -10,6 +10,7 @@
     "express": "3.0.0rc4",
     "jade": "*",
     "mongodb":">=0.9.9",
-    "connect-mongo":">=0.1.7"
+    "connect-mongo":">=0.1.7",
+    "connect-flash":""
   }
 }

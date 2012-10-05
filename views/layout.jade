@@ -1,3 +1,6 @@
+script(src="/javascripts/jquery.js")
+script(src="/javascripts/bootstrap.js")
+		
 html(xmlns='http://www.w3.org/1999/xhtml')
 	head
 		meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
@@ -8,7 +11,6 @@ html(xmlns='http://www.w3.org/1999/xhtml')
 		link(rel="stylesheet", type="text/css", href="/stylesheets/bootstrap-responsive.css")
 	
 	body
-	
 		div.navbar.navbar-fixed-top
 			div.navbar-inner
 				div.container
@@ -21,16 +23,17 @@ html(xmlns='http://www.w3.org/1999/xhtml')
 						ul.nav
 							li.active
 								a(href="/") Index
+
 						ul.nav
 							li
 								a(href="/login") Login
 							li 
-								a(href="/signup") SignUp
+								a(href="/signup") SignUp	
 				
 		div#container.container
+			p=
 			block content
 			footer
 				p 
 					a(href="http://blog.ownlinux.net", target="_blank") nourlcn
-		script(src="/javascripts/jquery.js")
-		script(src="/javascripts/bootstrap.js")
+

@@ -1,24 +1,13 @@
 extends layout
-
 block content
+	p=
+	p=
+-	if (user){
+		div.hero-unit
+			p haha
+			h2 hahaha
+-	}else{
+		include say
+-	}
 
-	div.hero-unit
-		h2 Yes, I own linux. Show me on this page!
-		p blablabla
-		p 
-			a.btn.btn-primary.btn-large(href="/login") Login 
-			a.btn.btn-large(href="/signup") Sign Up
-				
-	div.row
-		div.span4
-			h2 HAHA 1
-			p CONTENT OF HAHA1
-				
-		div.span4
-			h2 HAHA 1
-			p CONTENT OF HAHA1
-				
-		div.span4
-			h2 HAHA 1
-			p CONTENT OF HAHA1
-	
+		include posts
