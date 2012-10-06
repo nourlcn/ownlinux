@@ -4,7 +4,7 @@ script(src="/javascripts/bootstrap.js")
 html(xmlns='http://www.w3.org/1999/xhtml')
 	head
 		meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
-		title ownlinux.net
+		title #{title}
 		style
 			body{padding-left:10px;padding-right:10px;padding-top:10px;padding-bottom:10px;}
 		link(rel="stylesheet", type="text/css", href="/stylesheets/bootstrap.css")
@@ -23,17 +23,26 @@ html(xmlns='http://www.w3.org/1999/xhtml')
 						ul.nav
 							li.active
 								a(href="/") Index
-
-						ul.nav
-							li
-								a(href="/login") Login
-							li 
-								a(href="/signup") SignUp	
+						if (!user)
+							ul.nav
+								li
+									a(href="/login") Login
+								li 
+									a(href="/signup") SignUp	
+						else
+							ul.nav
+								li
+									a(href="/self") Self
+								li 
+									a(href="/logout") Logout
 				
 		div#container.container
-			p=
+			p
+			p
+			
 			block content
+			p
 			footer
-				p 
+				p(align="center") 
 					a(href="http://blog.ownlinux.net", target="_blank") nourlcn
 

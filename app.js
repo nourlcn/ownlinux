@@ -27,7 +27,19 @@ app.configure(function(){
   app.use(express.session({
       secret: settings.cookieSecret,
       store: new MongoStore({db:settings.db})
-      }));
+  }));
+  
+  app.use(function(req, res, next){
+    res.locals.user = req.session.user;
+    next();
+  });
+    
+  app.use(require('connect-flash')());
+  app.use(function(req, res, next) {
+    res.locals.flash = function() { return req.flash() };
+    next();
+  }); 
+  
   app.use(app.router);
   app.use(express.static(path.join(__dirname, '/public')));
 });

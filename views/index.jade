@@ -1,13 +1,11 @@
 extends layout
 block content
-	p=
-	p=
--	if (user){
+	if(!user)
 		div.hero-unit
-			p haha
-			h2 hahaha
--	}else{
-		include say
--	}
-
-		include posts
+			h1 Hello, Ownlinux..
+			p Microblog 是一个基于 Node.js 的微博系统。
+			p
+				a.btn.btn-primary.btn-large(href='/login') Login
+				a.btn.btn-large(href='/signup') Signup
+	else
+		include post
